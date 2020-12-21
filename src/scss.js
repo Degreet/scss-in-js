@@ -29,7 +29,9 @@ function handleRules(rules) {
         html += `${property}: ${typeof value == "number" ?
           `${value}px` : value};`
       } else {
-        temp.push(handleRules({ [`${selector} ${property}`]: value }))
+        temp.push(handleRules({
+          [`${selector}${property.includes("&") ? `${property.replace("&", "")}` : ` ${property}`}`]: value
+        }))
       }
     }
     html += `}`
@@ -43,14 +45,3 @@ function handleRules(rules) {
 
   return html
 }
-
-/*
-  scss.style({
-    "h1": {
-      "color": "red",
-      "span": {
-        "color": "green"
-      }
-    }
-  })
-*/
