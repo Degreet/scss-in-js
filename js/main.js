@@ -31,7 +31,7 @@ scss.style({
   }
 })
 
-scss.adaptability(850, {
+scss.adaptive(850, {
   "h1": {
     "text-align": "center",
     "padding": "0, 30px",
@@ -39,7 +39,7 @@ scss.adaptability(850, {
   }
 })
 
-scss.adaptability(550, {
+scss.adaptive(550, {
   "body div": {
     "display": "flex",
     "flex-direction": "column",

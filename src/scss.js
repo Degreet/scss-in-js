@@ -7,7 +7,7 @@ const scss = {
     document.head.append(el)
   },
 
-  adaptability(on, rules) {
+  adaptive(on, rules) {
     const el = document.createElement("style")
     const html = `@media (max-width: ${typeof on == 'number' ? `${on}px` : on}) { ${handleRules(rules)} }`
 
