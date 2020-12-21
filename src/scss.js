@@ -5,6 +5,14 @@ const scss = {
 
     el.innerHTML = html
     document.head.append(el)
+  },
+
+  adaptability(on, rules) {
+    const el = document.createElement("style")
+    const html = `@media (max-width: ${typeof on == 'number' ? `${on}px` : on}) { ${handleRules(rules)} }`
+
+    el.innerHTML = html
+    document.head.append(el)
   }
 }
 

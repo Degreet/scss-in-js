@@ -10,3 +10,9 @@ scss.style({
     }
   }
 })
+
+scss.adaptability(500, {
+  h1: {
+    "color" : "yellow"
+  }
+})
