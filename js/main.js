@@ -5,7 +5,8 @@ scss.style({
     "justify-content": "center",
     "height": "100vh",
     "align-items": "center",
-    "font-family": "Lato, Roboto, sans-serif"
+    "font-family": "Lato, Roboto, sans-serif",
+    "overflow": "hidden"
   },
 
   "h1": {
@@ -26,6 +27,26 @@ scss.style({
 
     "&:hover": {
       "background": "#2e2e9c"
+    }
+  }
+})
+
+scss.adaptability(850, {
+  "h1": {
+    "text-align": "center",
+    "padding": "0, 30px",
+    "font-size": 37
+  }
+})
+
+scss.adaptability(550, {
+  "body div": {
+    "display": "flex",
+    "flex-direction": "column",
+
+    "a:not(:first-child)": {
+      "margin-left": "unset",
+      "margin-top": 10
     }
   }
 })
